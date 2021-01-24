@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let elements = ["rock", "paper", "scissors"];
+
+      function computerPlay() {
+        let computerSelection =
+          elements[Math.floor(Math.random() * elements.length)];
+        return computerSelection;
+      }
+
+      function playRound(playerSelection, computerSelection) {
+        if (
+          (playerSelection == "rock" && computerSelection == "scissors") ||
+          (playerSelection == "scissors" && computerSelection == "paper") ||
+          (playerSelection == "paper" && computerSelection == "rock")
+        ) {
+          playerScore = playerScore + 1;
+          return "You win!";
+        } else if (
+          (playerSelection == "rock" && computerSelection == "paper") ||
+          (playerSelection == "paper" && computerSelection == "scissors") ||
+          (playerSelection == "scissors" && computerSelection == "rock")
+        ) {
+          computerScore = computerScore + 1;
+          return "You lose!"; 
+        } else {
+          return "Tie!"; 
+        }
+      }
+
+      let playerScore = 0;
+      let computerScore = 0;
+      let gameRound = 0;
+
+      function game() {
+        // ?gameRound = gameRound + 1;
+        // ?while (gameRound <= 5) {
+        for (let i = 0; i < 5; i++) {
+          let playerSelection = prompt("rock, paper or scissors?");
+          playerSelection = playerSelection.toLowerCase();
+          let computerSelection = computerPlay();
+          console.log(playRound(playerSelection, computerSelection));
+        }
+        if (playerScore > computerScore) {
+          return "winner!";
+        } else if (computerScore > playerScore) {
+          return "loser!";
+        } else {
+          return "what a tie";
+        }
+      }
+      // ?if (gameRound > 5) {
+      //   ?return "game over"
+    </script>
+  </body>
+</html>

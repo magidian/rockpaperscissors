@@ -1,0 +1,28 @@
+section-scoreboard, intro, match
+
+
+
+
+
+
+
+
+
+
+
+WHY ALWAYS RUN ELSE STATEMENT?
+HOW TO ADD CASE INSENSITIVE FLAG?
+how to display the selection and result in the console?
+
+
+
+make an array containing rock,paper and scissors elements
+computer chooses from the array random element using math.random function
+computer returns a random element
+
+function needs to prompt the user to input(choose) either rock, paper or scissors
+use conditionals to determine the winner of the game
+
+
+display
+score, win/lose, round
